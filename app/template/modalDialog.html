@@ -1,0 +1,34 @@
+<ul class="nav navbar-nav pull-right">
+  <ul class="nav navbar-nav">
+    <button type="button" class="nav navbar-btn btn push-right" data-toggle="modal" data-target="#detailEntryForm" id="changeDetailsBtn" href="#">&nbsp;&nbsp;Change Details</button>
+  </ul>
+</ul>
+<div id="detailEntryForm" class="modal fade" role="dialog" >
+  
+  <div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Enter Details</h4>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" ng-model="formName">
+        </div>
+        <div class="form-group">
+          <label for="address">Delivery Address:</label>
+          <input type="text" class="form-control" id="address" ng-model="formAddress">
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <span><button type="button" class="btn btn-default pull-left" data-dismiss="modal" ng-click="submitDetails(formName, formAddress)">Submit</button></span>
+        <span><button type="button" class="btn btn-default pull-right" data-dismiss="modal">Close</button></span>
+      </div>
+    </div>
+
+  </div>
+</div>

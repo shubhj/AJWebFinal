@@ -1,0 +1,59 @@
+<div ng-controller="RestaurantListController">
+	<div class="col-sm-3 col-md-3 pull-left container" style="background-color:white;color:black;padding:0px" >
+		<!-- <div class="container"> -->
+		<table class="table table-hover panel panel-default">
+			
+			<thead class="panel-heading">
+			  	<tr>
+				    <th>Filter Restaurants</th>
+				    <th></th>	
+			  	</tr>
+			</thead>
+			<tbody ng-repeat="option in options" class="panel-bodys">
+			  	<tr>
+			  		<td>{{option}}</td>
+			    	<td><label><input type="checkbox" value="" ng-model="optionValues[option]" ng-change="filterRestaurants(option)"></label></td>
+			  	</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="col-sm-8 col-md-8 pull-right " style="background-color:white;color:black;padding:0px">
+		<div class="panel-heading">
+		    {{filteredRestaurants.length}} Restaurants found !
+		</div>
+
+		<table class="table table-striped table-hover panel panel-default">
+			
+			<thead>
+			  	<tr>
+				    <th>Name</th>
+				    <th></th>
+				    <th>Rating</th>	
+			  	</tr>
+			</thead>
+			<colgroup>
+	            <col class="col-md-2">
+	            <col class="col-md-8">
+	            <col class="col-md-3 center">
+	        	</colgroup>
+			<tbody ng-repeat="restaurant in filteredRestaurants" class="panel-bodys">
+				
+			  	<tr style="color:black">
+			  		<td ><img src="images/restaurant.png" class="img-thumbnail" alt="Cinque Terre" ></td>
+			    	<td>
+			    		<a ng-href="#/menu/{{restaurant.id}}">{{restaurant.name}}</a><br/>
+			    		<p>{{restaurant.description}}</p>
+			    	</td>
+			    	<td>
+			    		<div>
+			    		<span ng-repeat="i in range(restaurant.rating) track by $index">	
+			    			<span class="glyphicon glyphicon-star"></span>
+			    		</span>
+			    		</div>
+			    	</td>
+			  	</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

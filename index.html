@@ -1,0 +1,48 @@
+<!-- 	
+	Created by: Priyanshu Srivastava (psrivast@adobe.com)
+		Created on: 23 June, 2016
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Foodie</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/custom_style.css">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.js"></script>
+	<script type="text/javascript" src="js/angular-cookies.js"></script>
+
+
+	<script type="text/javascript" src="app/controller/root.ctrl.js"></script>	
+	<script type="text/javascript" src="app/service/root.srv.js"></script>	
+	<script type="text/javascript" src="app/directive/root.drv.js"></script>	
+	<script type="text/javascript" src="app/config/root.cfg.js"></script>	
+
+
+
+</head>
+<body ng-app="main_module" ng-controller="RootController" background="images/bgnd.jpg">
+
+<top-bar brand="'Foodie'" first="'How'" second="'Help'"></top-bar>
+<nav class="navbar sb" ng-controller="SecondBarController">
+  	<div class="container-fluid">
+  		<second-bar brand="join(greet+user.name, user.address, opr)" class="col-xs-10 col-md-8 col-sm-5"></second-bar>
+		<div ng-include="'app/template/modalDialog.html'" class="pull-right col-xs-1 col-md-1 col-sm-1"></div>
+	</div>	
+</nav>
+
+
+<!-- <div class="sb" ng-controller="SecondBarController">
+	
+</div> -->
+
+<div class="container complete-parent" style="padding:40px">
+	<div ng-view class="complete-parent"></div>
+</div>
+</body>
+</html>

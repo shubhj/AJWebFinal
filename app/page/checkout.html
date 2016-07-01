@@ -1,0 +1,43 @@
+<div ng-controller="RootController" style="color:black" >
+<h4>
+	Deliver To: </br>
+	{{user.name}}</br>
+	at : {{user.address}}</br>
+	<button type="button"  data-toggle="modal" data-target="#myModal" >Change</button> </br>
+</h4>
+<h5>
+	Payment: </br>
+</h5>
+</div>
+
+<div ng-controller="checkoutController">
+<div ng-show="paymentSuccess" style="color:white; text-align:center; "><h3>Order is completed successfully!</h3><br /></div>
+ 	<table  border="black" bgcolor="black" class="table sortable" >
+		    	<tr style="color:white" class="panel-heading" bgcolor="black" >
+		    		<td>Quantity</td>
+		    		<td>Description</td>
+		    		<td>price </td>
+		    		<td>Total Price</td>
+		    	</tr>	
+			  	<tr style="color:black" ng-repeat="(dish,lst) in finalmenu"  bgcolor="grey">	
+			  		<td><p> {{lst[0]}} </p></td>
+					<td>{{dish}}</td>
+					<td>{{lst[1]}}  $</td>
+					<td>{{ lst[0]*lst[1] }}  $</td>
+					
+				</tr>
+				<br>
+				<tr style="color:blue" class="panel-bodys" bgcolor="grey">
+					<td>Total :</td>
+					<td></td>
+					<td></td>
+					<td> {{totalPrice}} $</td>
+				</tr>
+	</table>
+
+			<a class="pull-left" href="#/menu/{{restaurantId}}"> Back </br></a>
+			<button type="button" class="btn btn-info btn-lg pull-left" ng-click="printSucessMsg()"> Purchase </button> 
+			
+			<button type="button" class="btn btn-info btn-lg pull-left" > Clear Cart </button>
+
+</div>
