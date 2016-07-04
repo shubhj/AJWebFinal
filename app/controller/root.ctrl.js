@@ -1,6 +1,8 @@
 /*
-	Created by: Priyanshu Srivastava (psrivast@adobe.com)
-		Created on: 23 June, 2016
+Created by: 
+	Priyanshu Srivastava (psrivast@adobe.com)
+	Akash Agarwal (akasagar@adobe.com)
+	Shubhi Jain (shubjain@adobe.com)
 */
 
 (function() {

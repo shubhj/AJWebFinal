@@ -1,5 +1,8 @@
 /**
-	*	@author:priy2501@gmail.com
+Created by: 
+	Priyanshu Srivastava (psrivast@adobe.com)
+	Akash Agarwal (akasagar@adobe.com)
+	Shubhi Jain (shubjain@adobe.com)
 	*	@version:1.0
 	*	Service code to interact with REST endpoints
 **/
